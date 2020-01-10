@@ -1,14 +1,26 @@
 Intent of our testing is to validate the behavior of a class
 Mocking techniques should be applied to the external dependencies of the class and not to the class itself.
 
+STUBBING METHOD’S RETURNED VALUE
+One of the basic functions of mocking frameworks is an ability to return a given value when a specific method is called. It can be done using Mockito.when() in conjunction with thenReturn () . This process of defining how a given mock method should behave is called stubbing.
+
+Mockito makes heavy use of static methods. It is good to use static imports to make code shorter and more readable. IDE can be used to
+automatize adding static imports
+
+
 # Test Doubles
 1. Dummy
 2. Fake
 3. Stub
 4. Mock
-
+Spy - a mock created as a proxy to an existing real object; some
+methods can be stubbed, while the un- stubbed ones are forwarded to the covered object
 ----------------------------------------------------
 # Mockito 
+
+Basics. Annotations, 
+
+
 
 Mocking in Mockito is performed using when(obj).then*() in the Arrange step.
 Later, interaction with our mock can be validated using verify() in the Assert step.
