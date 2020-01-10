@@ -24,7 +24,12 @@ when(listMock.add(anyString())).thenReturn(false);
 4. Mocking with MockSettings
 
 
-## ArgumentMatchers
+## ArgumentMatchers - making sure certain arguments were passed to mocks.
+
+ArgumentCaptor may be a better fit if we need it to assert on argument values to complete
+verification or our custom argument matcher is not likely to be reused.
+
+Custom argument matchers via ArgumentMatcher are usually better for stubbing.
 
 
 ----------------------------------------------------
