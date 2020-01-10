@@ -74,6 +74,15 @@ write our Arrange step using given (instead of when), likewise, we could write o
 ----------------------------------------------------
 
 # PowerMock
+
+Mockito cannot:
+•	 mock final classes
+•	 mock enums
+•	 mock final methods
+•	 mock static methods
+•	 mock private methods
+•	 mock hashCode() and equals()
+
 Provides capabilities to work with the Java Reflection API in a simple way to overcome the problems of Mockito, such as the lack of ability to mock final, static or private methods.
 
 @RunWith(PowerMockRunner.class)
