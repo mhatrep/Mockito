@@ -1,9 +1,13 @@
+Intent of our testing is to validate the behavior of a class
+Mocking techniques should be applied to the external dependencies of the class and not to the class itself.
+
 # Test Doubles
 1. Dummy
 2. Fake
 3. Stub
 4. Mock
 
+----------------------------------------------------
 # Mockito 
 
 Mocking in Mockito is performed using when(obj).then*() in the Arrange step.
@@ -23,6 +27,7 @@ when(listMock.add(anyString())).thenReturn(false);
 3. Mocking with Answer (implements Answer<Boolean> )
 4. Mocking with MockSettings
 
+----------------------------------------------------
 
 ## ArgumentMatchers - making sure certain arguments were passed to mocks.
 
@@ -31,21 +36,16 @@ verification or our custom argument matcher is not likely to be reused.
 
 Custom argument matchers via ArgumentMatcher are usually better for stubbing.
 
-
 ----------------------------------------------------
-
 
 @Mock - create and inject mocked instances without having to call Mockito.mock manually
 @Spy - spy on an existing instance.
 @Captor - create an ArgumentCaptor instance
 @InjectMocks - inject mock fields into the tested object automatically.
 
-
 ----------------------------------------------------
 
 Mockito.when(wordMap.get("aWord")).thenReturn("aMeaning");
-
-
 
 ----------------------------------------------------
 
@@ -54,10 +54,18 @@ They make tests more readable
 @InjectMocks is necessary for injecting both @Spy and @Mock instances
 
 
-
-
 ## BDDMockito
 import static org.mockito.BDDMockito.*;
 
 write our Arrange step using given (instead of when), likewise, we could write our Assert step using then (instead of verify).
+
+----------------------------------------------------
+
+# PowerMock
+Provides capabilities to work with the Java Reflection API in a simple way to overcome the problems of Mockito, such as the lack of ability to mock final, static or private methods.
+
+@RunWith(PowerMockRunner.class)
+Partial Mocking - Partial Class
+
+
 
