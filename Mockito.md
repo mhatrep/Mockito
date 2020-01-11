@@ -8,6 +8,9 @@ Mockito makes heavy use of static methods. It is good to use static imports to m
 automatize adding static imports
 
 
+----------------------------------------------------
+
+
 # Test Doubles
 1. Dummy
 2. Fake
