@@ -92,4 +92,7 @@ Provides capabilities to work with the Java Reflection API in a simple way to ov
 Partial Mocking - Partial Class
 
 
+----------------------------------------------------
+
+## Stub vs Mock vs Spy
 
