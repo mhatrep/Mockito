@@ -96,3 +96,16 @@ Partial Mocking - Partial Class
 
 ## Stub vs Mock vs Spy
 
+----------------------------------------------------
+https://mkyong.com/spring-boot/mockito-how-to-mock-repository-findbyid-thenreturn-optional/
+	@MockBean
+	private BookRepository mockRepository;
+	
+	 @Before
+    public void init() {
+       
+        Book book = new Book(1L, "A Book");
+		when(mockRepository.findById(1L)).thenReturn(Optional.of(book));
+
+    }
+
